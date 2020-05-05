@@ -1,6 +1,8 @@
 import Vue from 'vue'
-import { Col, Row, Icon, Field, Grid, GridItem } from 'vant'
+import { Col, Row, Icon, Field, Grid, GridItem, Card, Button } from 'vant'
 
+Vue.use(Button)
+Vue.use(Card)
 Vue.use(Grid)
 Vue.use(GridItem)
 Vue.use(Field)
