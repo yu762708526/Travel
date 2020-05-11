@@ -11,7 +11,7 @@
         </div>
       </van-col>
       <van-col span="5">
-        <span class="list_icon_right_list">城市</span>
+        <span class="list_icon_right_list">{{city}}</span>
         <span class="iconfont list_icon_right">&#xe64a;</span>
       </van-col>
     </van-row>
@@ -20,6 +20,7 @@
 <script>
 export default {
   name: 'homeHeader',
+  props: ['city'],
   data () {
     return {
       value: ''

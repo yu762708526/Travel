@@ -8,32 +8,33 @@
         <img class="list_img" :src="item.imgUrl" alt="">
       </div>
       <p class="list_title">{{item.title}}</p>
-      <p class="list_dec">{{item.dec}}</p>
+      <p class="list_dec">{{item.desc}}</p>
     </div>
   </div>
 </template>
 <script>
 export default {
+  props: ['weekendList'],
   data () {
     return {
-      weekendList: [{
-        id: '0001',
-        imgUrl: '//img1.qunarzz.com/sight/p0/1702/db/dbc8f6cf051b3803a3.water.jpg_256x160_0cff5839.jpg',
-        title: '龙虎山',
-        dec: '神秘的古越族文明，体验绝美的自然风光'
-      },
-      {
-        id: '0002',
-        imgUrl: '//img1.qunarzz.com/sight/p0/1702/db/dbc8f6cf051b3803a3.water.jpg_256x160_0cff5839.jpg',
-        title: '龙虎山',
-        dec: '神秘的古越族文明，体验绝美的自然风光'
-      },
-      {
-        id: '0003',
-        imgUrl: '//img1.qunarzz.com/sight/p0/1702/db/dbc8f6cf051b3803a3.water.jpg_256x160_0cff5839.jpg',
-        title: '龙虎山',
-        dec: '神秘的古越族文明，体验绝美的自然风光'
-      }]
+      // weekendList: [{
+      //   id: '0001',
+      //   imgUrl: '//img1.qunarzz.com/sight/p0/1702/db/dbc8f6cf051b3803a3.water.jpg_256x160_0cff5839.jpg',
+      //   title: '龙虎山',
+      //   dec: '神秘的古越族文明，体验绝美的自然风光'
+      // },
+      // {
+      //   id: '0002',
+      //   imgUrl: '//img1.qunarzz.com/sight/p0/1702/db/dbc8f6cf051b3803a3.water.jpg_256x160_0cff5839.jpg',
+      //   title: '龙虎山',
+      //   dec: '神秘的古越族文明，体验绝美的自然风光'
+      // },
+      // {
+      //   id: '0003',
+      //   imgUrl: '//img1.qunarzz.com/sight/p0/1702/db/dbc8f6cf051b3803a3.water.jpg_256x160_0cff5839.jpg',
+      //   title: '龙虎山',
+      //   dec: '神秘的古越族文明，体验绝美的自然风光'
+      // }]
 
     }
   }
