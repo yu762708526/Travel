@@ -37,7 +37,6 @@ export default {
       res = res.data
       if (res.ret && res.data) {
         const data = res.data
-        console.log(data)
         this.swiperList = data.swiperList
         this.iconList = data.iconList.slice(0, 8)
         this.iconListLone = data.iconList.slice(8, 9)

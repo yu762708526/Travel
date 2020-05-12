@@ -11,7 +11,9 @@
         </div>
       </van-col>
       <van-col span="5">
-        <span class="list_icon_right_list">{{city}}</span>
+        <router-link to="/city">
+          <span class="list_icon_right_list">{{city}}</span>
+        </router-link>
         <span class="iconfont list_icon_right">&#xe64a;</span>
       </van-col>
     </van-row>
