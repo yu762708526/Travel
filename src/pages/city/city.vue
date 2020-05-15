@@ -2,8 +2,8 @@
   <div class="city">
     <city-header></city-header>
     <city-search></city-search>
-    <city-list> </city-list>
-    <index-list></index-list>
+    <city-list :allCities="allCities" :allHotCities="allHotCities"> </city-list>
+    <index-list :allCities="allCities"></index-list>
   </div>
 </template>
 <script>
@@ -18,6 +18,25 @@ export default {
     CitySearch,
     CityList,
     IndexList
+  },
+  data () {
+    return {
+      allCities: {},
+      allHotCities: []
+    }
+  },
+  mounted () {
+    this.axios.get('/user/city').then((res) => {
+      res = res.data
+      if (res.ret && res.data) {
+        const data = res.data
+        // console.log(data)
+        this.allCities = data.cities
+        this.allHotCities = data.hotCities
+        console.log(this.allCities)
+        console.log(this.allHotCities)
+      }
+    })
   }
 }
 </script>

@@ -33,7 +33,7 @@ export default {
     }
   },
   mounted () {
-    this.axios.get('/api/index').then((res) => {
+    this.axios.get('/user/index').then((res) => {
       res = res.data
       if (res.ret && res.data) {
         const data = res.data

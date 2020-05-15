@@ -16,6 +16,7 @@ const mock = true
 if (mock) {
   require('./mock/api')
 }
+axios.defaults.baseURL = '/api'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)

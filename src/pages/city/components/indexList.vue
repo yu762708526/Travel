@@ -1,22 +1,14 @@
 <template>
   <div class="indexList">
     <ul class="list">
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
+      <li class="item" v-for="(item, key) in allCities" :key="key">{{key}}</li>
     </ul>
   </div>
 </template>
 <script>
 export default {
-  name: 'IndexList'
+  name: 'IndexList',
+  props: ['allCities']
 }
 </script>
 <style lang="stylus" scoped>
