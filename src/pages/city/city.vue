@@ -1,7 +1,7 @@
 <template>
   <div class="city">
     <city-header></city-header>
-    <city-search></city-search>
+    <city-search :allCities="allCities"></city-search>
     <city-list :allCities="allCities" :allHotCities="allHotCities" :letter="letter"> </city-list>
     <index-list :allCities="allCities" @change="handleLetterChange"></index-list>
   </div>
@@ -34,8 +34,6 @@ export default {
         // console.log(data)
         this.allCities = data.cities
         this.allHotCities = data.hotCities
-        console.log(this.allCities)
-        console.log(this.allHotCities)
       }
     })
   },
