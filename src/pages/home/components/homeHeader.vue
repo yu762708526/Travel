@@ -4,15 +4,15 @@
       <van-col span="3">
         <van-icon name="arrow-left" color="#B9FDFF" size="0.5rem" class="list_icon" />
       </van-col>
-      <van-col span="16" class="col_input">
+      <van-col span="15" class="col_input">
         <div class="list_input">
           <van-icon name="search" size="0.4rem" class="list_input_icon" />
           <span class="list_input_text">输入城市景点主题</span>
         </div>
       </van-col>
-      <van-col span="5">
+      <van-col span="6">
         <router-link to="/city">
-          <span class="list_icon_right_list">{{city}}</span>
+          <span class="list_icon_right_list">{{this.city}}</span>
         </router-link>
         <span class="iconfont list_icon_right">&#xe64a;</span>
       </van-col>
@@ -20,13 +20,18 @@
   </div>
 </template>
 <script>
+import { mapState, mapGetters } from 'vuex'
 export default {
   name: 'homeHeader',
-  props: ['city'],
+  // props: ['city'],
   data () {
     return {
       value: ''
     }
+  },
+  computed: {
+    ...mapState(['city']),
+    ...mapGetters(['doubleCity'])
   }
 }
 </script>

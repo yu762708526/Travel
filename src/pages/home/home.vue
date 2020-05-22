@@ -1,6 +1,6 @@
 <template>
   <div>
-    <home-header :city="city"></home-header>
+    <home-header></home-header>
     <home-swiper :swiperList="swiperList"></home-swiper>
     <home-icon :iconList="iconList" :iconListLone="iconListLone"></home-icon>
     <recommend :recommendList="recommendList"></recommend>
@@ -24,7 +24,7 @@ export default {
   },
   data () {
     return {
-      city: '城市',
+      // city: '城市',
       swiperList: [],
       iconList: [],
       iconListLone: [],
