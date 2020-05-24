@@ -12,11 +12,11 @@ import 'swiper/css/swiper.css'
 import axios from 'axios'
 import vueAxios from 'vue-axios'
 // mock开关
-const mock = true
-if (mock) {
-  require('./mock/api')
-}
-axios.defaults.baseURL = '/api'
+// const mock = true
+// if (mock) {
+//   require('./mock/api')
+// }
+// axios.defaults.baseURL = '/api'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)

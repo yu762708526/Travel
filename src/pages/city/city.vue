@@ -27,7 +27,7 @@ export default {
     }
   },
   mounted () {
-    this.axios.get('/user/city').then((res) => {
+    this.axios.get('/api/city.json').then((res) => {
       res = res.data
       if (res.ret && res.data) {
         const data = res.data
