@@ -53,7 +53,7 @@ export default {
   methods: {
     // 获取首页数据
     getCityInfo () {
-      this.axios.get('/api/index.json?city=' + this.city).then((res) => {
+      this.axios.get('/api/index.json', { params: { city: this.city } }).then((res) => {
         res = res.data
         if (res.ret && res.data) {
           const data = res.data

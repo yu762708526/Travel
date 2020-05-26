@@ -7,6 +7,7 @@ module.exports = {
     config.resolve.alias
       .set('@', resolve('src'))
       .set('styles', resolve('src/assets/styles'))
+      .set('common', resolve('src/common'))
     // set第一个参数：设置的别名，第二个参数：设置的路径
   },
   devServer: {

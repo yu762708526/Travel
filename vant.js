@@ -1,6 +1,7 @@
 import Vue from 'vue'
-import { Col, Row, Icon, Field, Grid, GridItem, Card, Button, Search, IndexBar, IndexAnchor, Cell } from 'vant'
+import { Col, Row, Icon, Field, Grid, GridItem, Card, Button, Search, IndexBar, IndexAnchor, Cell, NavBar } from 'vant'
 
+Vue.use(NavBar)
 Vue.use(Cell)
 Vue.use(IndexBar)
 Vue.use(IndexAnchor)

@@ -4,11 +4,13 @@
       热门推荐
     </div>
     <div v-for="item in recommendList" :key="item.id">
-      <van-card price="85.00" :desc="item.desc" :title="item.title" :thumb="item.imgUrl">
-        <template #bottom class="card_button">
-          <van-button size="mini" class="card_button">查看详情</van-button>
-        </template>
-      </van-card>
+      <router-link :to="'/detail/'+item.id">
+        <van-card price="85.00" :desc="item.desc" :title="item.title" :thumb="item.imgUrl">
+          <template #bottom class="card_button">
+            <van-button size="mini" class="card_button">查看详情</van-button>
+          </template>
+        </van-card>
+      </router-link>
     </div>
   </div>
 </template>
