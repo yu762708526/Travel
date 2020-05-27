@@ -41,8 +41,13 @@ export default {
       }
     }
   },
-  mounted () {
+  // 页面刷新时执行
+  activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  // 页面即将被隐藏或者页面即将被替换成新的界面
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
