@@ -26,7 +26,7 @@ export default {
   data () {
     return {
       // city: '城市',
-      lastCity: '',
+      // lastCity: '',
       swiperList: [],
       iconList: [],
       iconListLone: [],
@@ -40,16 +40,16 @@ export default {
   mounted () {
     this.getCityInfo()
     // 把当前城市保存
-    this.lastCity = this.city
+    // this.lastCity = this.city
   },
   // 页面每次重新显示的时候触发这个生命周期函数
-  activated () {
-    // 如果上次保存的城市不等于当前城市
-    if (this.lastCity !== this.city) {
-      this.lastCity = this.city
-      this.getCityInfo()
-    }
-  },
+  // activated () {
+  //   // 如果上次保存的城市不等于当前城市
+  //   if (this.lastCity !== this.city) {
+  //     this.lastCity = this.city
+  //     this.getCityInfo()
+  //   }
+  // },
   methods: {
     // 获取首页数据
     getCityInfo () {

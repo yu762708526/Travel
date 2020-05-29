@@ -1,17 +1,16 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img class="banner-img"
-        src="//img1.qunarzz.com/sight/p0/1606/54/541cab96b3373777e2.water.jpg_600x330_30620e49.jpg" alt="">
+      <img class="banner-img" :src="this.bannerImg" alt="">
       <div class="banner-info">
-        <div class="info-test">西海水世界·巾口景区</div>
+        <div class="info-test">{{this.sightName}}</div>
         <div class="info-icon">
           <van-icon name="photo" class="icon-photo" />
           <i>12</i>
         </div>
       </div>
     </div>
-    <Gallary :imgs="imgs" v-show="gallaryShow" @close="closeGallary"></Gallary>
+    <Gallary :imgs="this.gallaryImgs" v-show="gallaryShow" @close="closeGallary"></Gallary>
   </div>
 
 </template>
@@ -22,12 +21,18 @@ export default {
   components: {
     Gallary
   },
+  // props: ['sightName', 'bannerImg', 'gallaryImgs'],
+  props: {
+    sightName: String,
+    bannerImg: String,
+    gallaryImgs: Array
+  },
   data () {
     return {
-      gallaryShow: false,
-      imgs: ['http://img1.qunarzz.com/sight/p0/1606/52/5269f93eebcae9f5e2.water.jpg_r_800x800_25e30d50.jpg',
-        'http://img1.qunarzz.com/sight/p0/1606/3f/3fa08ea40a69a76ee2.water.jpg_r_800x800_280ebabd.jpg',
-        'http://img1.qunarzz.com/sight/p0/1606/81/81f68702a3c2a27be2.water.jpg_r_800x800_6bf853e7.jpg']
+      gallaryShow: false
+      // imgs: ['http://img1.qunarzz.com/sight/p0/1606/52/5269f93eebcae9f5e2.water.jpg_r_800x800_25e30d50.jpg',
+      //   'http://img1.qunarzz.com/sight/p0/1606/3f/3fa08ea40a69a76ee2.water.jpg_r_800x800_280ebabd.jpg',
+      //   'http://img1.qunarzz.com/sight/p0/1606/81/81f68702a3c2a27be2.water.jpg_r_800x800_6bf853e7.jpg']
     }
   },
   methods: {
