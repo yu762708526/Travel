@@ -1,8 +1,9 @@
 <template>
   <div class="indexList">
     <ul class="list">
-      <li class="item" v-for="item in letters" :key="item" @click="handClickIndex" @touchstart="handleTouchStart"
-        @touchmove="handleTouchMove" @touchend="handleTouchEnd" :ref="item">{{item}}</li>
+      <li class="item" v-for="item in letters" :key="item" @click="handClickIndex"
+        @touchstart.prevent="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd" :ref="item">
+        {{item}}</li>
     </ul>
   </div>
 </template>

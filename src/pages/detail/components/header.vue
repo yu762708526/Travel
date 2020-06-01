@@ -26,6 +26,7 @@ export default {
     }
   },
   methods: {
+
     // 监听的滚动事件
     handleScroll () {
       const top = document.documentElement.scrollTop

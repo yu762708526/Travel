@@ -21,6 +21,7 @@ export default {
     return {
     }
   }
+
 }
 </script>
 <style lang="stylus" scoped>

@@ -37,6 +37,7 @@ export default {
       return this.swiperList.length
     }
   }
+
 }
 </script>
 <style lang="stylus" scoped>

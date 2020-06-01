@@ -12,7 +12,7 @@
       <div class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="btn-list">
-          <div class="btn-wraper" v-for="item in allHotCities" :key="item.id" @click="handleCityClick(item.name)">
+          <div class="btn-wraper" @click="handleCityClick(item.name)" v-for="item in allHotCities" :key="item.id">
             <div class="btn">{{item.name}}</div>
           </div>
         </div>
@@ -50,7 +50,10 @@ export default {
 
   },
   mounted () {
-    this.scroll = new Bscroll(this.$refs.wrapper)
+    const options = {
+      click: true
+    }
+    this.scroll = new Bscroll(this.$refs.wrapper, options)
   },
   watch: {
     letter () {

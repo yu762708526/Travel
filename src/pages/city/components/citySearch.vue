@@ -35,8 +35,8 @@ export default {
     handleCityClick (city) {
       // this.$store.commit('changeCity', city)
       this.changeCity(city)
-      // 点击搜索到的内容后 跳转到首页
       this.$router.push('/')
+      // 点击搜索到的内容后 跳转到首页
     },
     ...mapMutations(['changeCity'])
   },
@@ -81,7 +81,10 @@ export default {
     }
   },
   mounted () {
-    this.scroll = new Bscroll(this.$refs.search)
+    const options = {
+      click: true
+    }
+    this.scroll = new Bscroll(this.$refs.search, options)
   }
 }
 </script>

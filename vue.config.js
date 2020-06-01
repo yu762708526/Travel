@@ -11,7 +11,7 @@ module.exports = {
     // set第一个参数：设置的别名，第二个参数：设置的路径
   },
   devServer: {
-    host: 'localhost',
+    host: '0.0.0.0', // 允许外部ip访问
     port: 8080,
     proxy: {
       '/api': {
